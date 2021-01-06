@@ -1,5 +1,4 @@
 import React from "react";
-import './App.css'
 
 import Login from "./Components/Login";
 import Register from "./Components/Register";
@@ -12,9 +11,12 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>Plan A Potluck</h1>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" render={props => <Login {...props} />} />
         </header>
-        <Register />
+        <Route
+            path="/Register"
+            render={props => <Register {...props} />}
+          />
       </div>
     </Router>
   );
