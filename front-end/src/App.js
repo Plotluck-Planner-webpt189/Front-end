@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Plan A Potluck</h1>
+          
           <Route exact path="/" render={props => <Login {...props} />} />
         </header>
         <Route
